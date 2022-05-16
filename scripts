@@ -1,0 +1,93 @@
+function at_01_b01(){
+    window.alert("Você pressionou o botão 1!");
+}
+
+function at_01_b02(){
+    window.alert("Você pressionou o botão 2!");
+}
+
+function at_01_b03(){
+    window.alert("Você pressionou o botão 3!");
+}
+
+
+
+function at_02(){
+    var nome = window.prompt("Informe o nome: ");
+    var idade = window.prompt("Informe a idade: ");
+
+    window.alert("Acabei de conhecer " + nome + ", que tem " + idade + " anos de idade.")
+}
+
+
+
+function at_03(){
+    var num = Number (window.prompt("Informe um número: "));
+    var ant = num - 1;
+    var suc = num + 1;
+
+    window.alert("O número informado pelo usuário foi " + num + ". Antes do número " + num + " temos o número " + ant + ". Depois do número " + num + " temos o número " + suc + ".");
+}
+
+function at_04(){
+    var produto = window.prompt("Informe o produto: ");
+    var preco = window.prompt("Informe o preço: ");
+    var valor = window.prompt("Informe o valor entregue ao vendedor: ");
+    var troco = valor - preco;
+    
+    window.alert("Você comprou um produto (" + produto + ") por R$ " + preco + " e entregou ao vendedor R$ " + valor + " em dinheiro. Você vai receber R$ " + troco + " de troco. Volte sempre!");
+}
+
+function at_05(){
+    var celsius = window.prompt("Informe a temperatura em Celsius: ");
+    var resultado = (celsius * 1.8) + 32;
+    
+    window.alert(celsius + " graus em Celsius equivalem a " + resultado + " em Fahrenheit.");
+}
+
+
+function at_06(){
+    var valor = window.prompt("Informe a quantidade em reais: ");
+    var cotacao_dolar = window.prompt("Informe a cotação do dólar: ");
+    var valor_dolar = valor / cotacao_dolar;
+
+    document.getElementById("resultado").innerHTML = "Valor em dólar: " + valor_dolar.toFixed(2);
+}
+
+function at_07(){
+    var produto = window.prompt("Informe o nome do produto: ");
+    var preco = window.prompt("Informe o preço do produto: ");
+    var desconto = (preco * 10) / 100;
+    var resultado = preco - desconto;
+
+    document.getElementById("resultado").innerHTML = "Você comprou um produto (" + produto + ") por R$ " + preco + " e acaba de ganhar 10% de desconto. Assim você vai pagar apenas R$ " + resultado + " pelo seu produto. Volte sempre!";
+}
+
+function at_08(){
+    var vel = window.prompt("Informe a velocidade média da viagem em km/h: ");
+    var tempo = window.prompt("Informe o tempo de duração da viagem em horas");
+    var dist = vel * tempo;
+    var qtdL = dist / 12;
+
+    document.getElementById("resultado").innerHTML = "Quantidade de litros gastos: " + qtdL.toFixed(2);
+}
+
+var contador = 0
+function at_09_01(){
+    contador++;
+    document.getElementById("resultado").innerHTML = contador;
+}
+
+function at_09_02(){
+    contador = 0;
+    document.getElementById("resultado").innerHTML = contador;
+}
+
+function at_10(){
+    var num = window.prompt("Informe um número: ");
+    document.getElementById("resultado").innerHTML =
+    "Esse número elevado ao quadrado é " + Math.pow (num, 2) + "." +
+    " Esse número elevado ao cubo é " + Math.pow (num, 3) + "." +
+    " A raiz quadrada desse número é " + Math.sqrt (num).toFixed(2) + "." +
+    " A raiz cúbica desse número é " + Math.cbrt (num).toFixed(2) + ".";
+}
